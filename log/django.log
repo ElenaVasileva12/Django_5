@@ -16800,3 +16800,59 @@ Watching for file changes with StatReloader
 "POST /admin/storeapp/product/214/change/ HTTP/1.1" 302 0
 "GET /admin/storeapp/product/ HTTP/1.1" 200 13460
 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 500 59
+"GET /favicon.ico HTTP/1.1" 500 59
+"GET /store/client/ HTTP/1.1" 500 59
+"GET /favicon.ico HTTP/1.1" 500 59
+"GET /store/client/ HTTP/1.1" 500 59
+"GET /favicon.ico HTTP/1.1" 500 59
+D:\Обучение\Python\GeekBrains\Фреймворк Django\Project_1\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Обучение\Python\GeekBrains\Фреймворк Django\Project_1\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /store/client/
+"GET /store/client/ HTTP/1.1" 404 12848
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12411
+Internal Server Error: /store/client/5
+Traceback (most recent call last):
+  File "D:\Обучение\Python\GeekBrains\Фреймворк Django\Project_1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Обучение\Python\GeekBrains\Фреймворк Django\Project_1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Обучение\Python\GeekBrains\Фреймворк Django\Project_1\myproject\storeapp\views.py", line 84, in view_client
+    e1.products.add(product1)
+AttributeError: 'NoneType' object has no attribute 'products'
+"GET /store/client/5 HTTP/1.1" 500 81026
+Not Found: /store/client/
+"GET /store/client/ HTTP/1.1" 404 12848
+"GET /store/product/ HTTP/1.1" 200 11636
+"GET /__debug__/render_panel/?store_id=eee18395881f401bbf7daf2af2e33f5e&panel_id=VersionsPanel HTTP/1.1" 200 760
+"GET /__debug__/render_panel/?store_id=eee18395881f401bbf7daf2af2e33f5e&panel_id=SQLPanel HTTP/1.1" 200 35343
+"GET /__debug__/render_panel/?store_id=eee18395881f401bbf7daf2af2e33f5e&panel_id=RequestPanel HTTP/1.1" 200 2321
+Not Found: /
+"GET / HTTP/1.1" 404 12349
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+"GET /blog HTTP/1.1" 301 0
+"GET /blog/ HTTP/1.1" 200 5
+Not Found: /store/client/
+"GET /store/client/ HTTP/1.1" 404 12848
+"GET /store/product/ HTTP/1.1" 200 11636
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=SQLPanel HTTP/1.1" 200 35343
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=HistoryPanel HTTP/1.1" 200 17312
+"GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3330
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=VersionsPanel HTTP/1.1" 200 760
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=SettingsPanel HTTP/1.1" 200 27008
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=HeadersPanel HTTP/1.1" 200 5470
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=RequestPanel HTTP/1.1" 200 2321
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=StaticFilesPanel HTTP/1.1" 200 47419
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=TemplatesPanel HTTP/1.1" 200 43357
+"GET /__debug__/render_panel/?store_id=45a60c19d2774cf3af32e6639e063d53&panel_id=CachePanel HTTP/1.1" 200 1737

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,13 +22,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-lenc&whr5!f(3ud12tf5cr4@$w%c(5+==qn93@d0pkayhpex+8'
+#SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #False на боевом
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+ #   'geekbrains.pythonawhere.com',
     #можно указать локальный адрес телефона
+]
+
+INTERNAL_IPS = [
+'127.0.0.1',
 ]
 
 
@@ -44,9 +51,12 @@ INSTALLED_APPS = [
     'homeapp',
     'blogapp',
     'storeapp',
+    'debug_toolbar',
+
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -125,6 +135,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+#SECRET_ROOT = BASE_DIR / 'static/'  #на удаленном сервере
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
